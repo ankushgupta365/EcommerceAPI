@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { verifyTokenAndAuthorization, verifyTokenAndAdmin } = require("./verifyToken")
 const bcrypt = require("bcryptjs");
 const User = require('../models/User');
-const { json } = require('express');
 
 //in all the routes below we have used verifyTokenAnd... middleware which are imported from a file, which basically calls next fxn after getting jsonwebtoken from the headers and verifying it. if next fxn within them is called then the async fxn get it's turn to run
 
